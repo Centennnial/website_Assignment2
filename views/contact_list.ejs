@@ -1,0 +1,36 @@
+<!-- Hero section start -->
+<section class="hero-section">
+    <div class="hero-slider owl-carousel">
+        <div class="hs-item set-bg sp-pad" data-setbg="img/hero-slider/1.jpg">
+            <div class="hs-text" style="text-align: center;">
+                <br/>
+                <br/>
+  
+<table id="customers" style="background-color: white;">
+        <tr>
+            <th>Contact Name</th>
+            <th>Contact Number</th>
+            <th>Email Address</th>
+            <th>Delete a contact</th>
+            <th>Update a contact</th>
+        </tr>
+        <% for(var i=0; i < data.length; i++) { %>
+            <tr>   
+            <form  method="POST">
+            <input type="text" value="<%= data[i].contactEmail%>" name="email" hidden/>
+            <input type="text" value="<%= data[i].contactName%>" name="name" hidden/>
+            <input type="text" value="<%= data[i].contactNumber%>" name="phone" hidden/>
+            <input type="text" value="<%= data[i]._id%>" name="id" hidden/>
+              <td><%= data[i].contactName%></td>
+              <td><%= data[i].contactNumber%></td>
+              <td><%= data[i].contactEmail%></td>
+              <td><button formaction="/delete_contact">Delete</button></td>
+              <td><button formaction="/update_contact">Update</button></td>
+            </form>  
+            </tr>
+         <% } %> 
+        </table>
+    </div>
+        </div>	
+    </div>
+</section>

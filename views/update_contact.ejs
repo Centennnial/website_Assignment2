@@ -1,0 +1,33 @@
+<!-- Hero section start -->
+<section class="hero-section">
+    <div class="hero-slider owl-carousel">
+        <div class="hs-item set-bg sp-pad" data-setbg="img/hero-slider/1.jpg">
+            <div class="hs-text" style="text-align: center;">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div id="update" style="background-color: white;">
+                    <form method="POST">
+                      <label style="float: left">Contact Name</label>
+                      <input type="text" name="name" value="<%= name%>"> 
+                      <br/>
+                      <label style="float: left">Contact Number</label>
+                      <input type="text" name="phone" value="<%= phone%>">
+                      <br/>
+                      <label style="float: left">Contact Email</label>
+                      <input type="text" name="email" value="<%= email%>"> 
+                      <input type="text" name="id" value="<%= id%>" hidden/>     
+                      <input type="submit" value="Update" formaction="/contact_update">
+                      <input type="submit" value="Delete" formaction="/delete_contact">
+                      <br/>
+                      <br/>
+                      <br/>
+                      <a id="cancel" href="/contact_list">Cancel</a>
+                    </form>
+                  </div>
+            </div>
+        </div>	
+    </div>
+</section>
